@@ -9,6 +9,8 @@ type Props = {
 };
 
 const CoverImage = ({ title, src, slug }: Props) => {
+  // TODO: fix image loading issue on production due to next image optimisation messing with routes
+  // custom loader?
   const image = (
     <Image
       src={src}
@@ -18,6 +20,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
       })}
       width={1300}
       height={630}
+      unoptimized
     />
   );
   return (
