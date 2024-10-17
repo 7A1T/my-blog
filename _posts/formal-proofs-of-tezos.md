@@ -5,7 +5,7 @@ coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2024-10-14T20:35:07.322Z"
 author:
   name: Tait van Strien
-  picture: "/assets/blog/authors/tait.jpeg"
+  picture: "/assets/blog/authors/tait.jpg"
 ogImage:
   url: "/assets/blog/tezos-formal-land/cover.jpg"
 ---
