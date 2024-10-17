@@ -9,3 +9,23 @@ author:
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
+
+# Foundations
+
+- interest in own website
+  - personal blog/devlog/thing to keep accountable
+  - learning new things
+
+- intro to webdev
+  - webeng class, building basic backend in asp.net and frontend using vanilla js
+
+- learning rust
+  - building a simple webserver in rust
+
+- learning react
+  - thesis project
+
+- Learning how to use Next.js
+  - t3 stack
+
+- reverting

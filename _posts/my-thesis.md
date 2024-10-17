@@ -11,3 +11,12 @@ ogImage:
 ---
 
 My thesis was my first foray into react. I had to learn a lot of new things, but I'm happy with the result. I hope you enjoy reading it as much as I enjoyed writing it.
+
+- Research
+- Design
+- Implementation
+- Encountered Problems
+- Analysis
+- Conclusion
+- What I learned
+- What I would do differently
