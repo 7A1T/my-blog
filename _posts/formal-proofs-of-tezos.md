@@ -5,9 +5,9 @@ coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2024-10-14T20:35:07.322Z"
 author:
   name: Tait van Strien
-  picture: "/assets/blog/authors/jj.jpeg"
+  picture: "/assets/blog/authors/tait.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/blog/tezos-formal-land/cover.jpg"
 ---
 
 - what is tezos
