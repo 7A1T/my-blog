@@ -1,7 +1,7 @@
 ---
 title: "Writing formal proofs of the Tezos blockchain"
 excerpt: "During the summer of 2022, I worked as an intern at Formal Land, a company that specializes in formal verification of blockchain protocols. I worked on writing formal proofs of the Tezos blockchain."
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/tezos-formal-land/cover.jpg"
 date: "2024-10-14T20:35:07.322Z"
 author:
   name: Tait van Strien

@@ -7,7 +7,7 @@ author:
   name: Tait van Strien
   picture: "/assets/blog/authors/tait.jpg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/blog/hello-world/cover.jpg"
 ---
 
 ## To do list
@@ -17,4 +17,4 @@ ogImage:
 - [ ] Images for articles
 - [ ] profile image
 - [ ] about me
-- [ ] background animations (tree background with leaves for light mode, and snow for dark mode)
+- [ ] background animations (tree background with leaves for light mode, and snow/stars for dark mode)
