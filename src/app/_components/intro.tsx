@@ -2,6 +2,8 @@ import React from "react";
 import { CMS_NAME } from "@/lib/constants";
 import RainbowShadowText from "./rainbowShadowtext";
 import { Mail, Linkedin, Github, Gitlab } from "lucide-react";
+import Link from "next/link";
+import ProfileModal from "./profile-modal";
 
 export function Intro() {
   return (
@@ -15,8 +17,11 @@ export function Intro() {
           Tait van Strien
         </RainbowShadowText>
         <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-          {`A blog about web development, software engineering and my journey as a developer.`}
+          {`A blog about software development and my learning journey by a soon to be graduate of Computing Science at Rijksuniversiteit Groningen.`}
         </h4>
+        <div className="flex justify-center md:justify-start mt-2 md:pl-4">
+          <ProfileModal />
+        </div>
       </div>
       <div className="flex space-x-4 mt-6 md:mt-0">
         <a href="mailto:taitvanstrien@gmail.com" aria-label="Email">
