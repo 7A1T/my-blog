@@ -4,11 +4,11 @@ This is my website, the one you are on right now! I built it in next.js with sup
 
 # TODO:
 - [ ] Write a blog post about my thesis
-- [ ] Enable rendering of pdf or latex files
 - [ ] Add a scrolling bar of articles
 - [ ] Images for articles
-- [ ] profile image
-- [ ] about me
+- [x] profile image
+- [ ] learn how to take photos
+- [ ] add better profile image
+- [x] about me
 - [ ] background animations (tree background with leaves for light mode, and snow for dark mode)
-- [ ] add images to uploadthing
 - [ ] finish todo list
