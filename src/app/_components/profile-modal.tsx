@@ -13,16 +13,16 @@ const ProfileModal = () => {
     <div>
       <button
         onClick={openModal}
-        className="hover:underline text-white font-bold py-2 px-4 rounded"
+        className="hover:underline font-bold py-2 px-4 rounded"
       >
         About Me &rarr;
       </button>
 
       {isOpen && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
-          <div className="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
+          <div className="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 bg-white dark:bg-slate-900 shadow-lg rounded-md">
             <div className="flex justify-between items-center pb-3">
-              <button onClick={closeModal} className="text-black close-modal">
+              <button onClick={closeModal} className="close-modal">
                 &times;
               </button>
             </div>
@@ -40,17 +40,17 @@ const ProfileModal = () => {
                   />
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    About Me
-                  </h2>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    I am a soon-to-graduate Computer Science BSc student at the
-                    University of Groningen. Passionate about software
-                    development, I'm always seeking new challenges. My
-                    experience spans various programming languages and
-                    technologies, including JS, TS, C/C++, and Rust. I'm
-                    constantly eager to expand my knowledge and skills in the
-                    field.
+                  <h2 className="text-3xl font-bold mb-4">About Me</h2>
+                  <p className="text-lg leading-relaxed">
+                    I am an upcoming Bachelor’s graduate in Computer Science
+                    from the University of Groningen. Originally from South
+                    Africa, I've lived across Europe and hold citizenship in
+                    South Africa, the Netherlands, and the United Kingdom.
+                    Driven by a passion for software development, I’m always
+                    excited to take on new challenges. My experience covers a
+                    range of programming languages and technologies, including
+                    JavaScript, TypeScript, C/C++, and Rust, and I’m continually
+                    eager to deepen my skills and knowledge in the field.
                   </p>
                 </div>
               </div>
