@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { FileUser, GraduationCap } from "lucide-react";
 
 const ProfileModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +40,30 @@ const ProfileModal = () => {
                     height={200}
                     unoptimized
                   />
+                  <div className="py-4 flex flex-col items-start gap-4"> {/* Removed lg:flex-row */}
+                    <Link
+                      href="/assets/blog/pdfs/resume-tait-van-strien.pdf"
+                      className="hover:underline"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <FileUser className="w-6 h-6" />
+                        <h3 className="text-lg lg:text-xl font-bold tracking-tighter leading-tight">
+                          My Resume
+                        </h3>
+                      </div>
+                    </Link>
+                    <Link
+                      href="/assets/blog/pdfs/Tait-BSc-Thesis.pdf"
+                      className="hover:underline"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <GraduationCap className="w-6 h-6" />
+                        <h3 className="text-lg lg:text-xl font-bold tracking-tighter leading-tight">
+                          My BSc Thesis
+                        </h3>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="flex-grow">
                   <h2 className="text-3xl font-bold mb-4">About Me</h2>

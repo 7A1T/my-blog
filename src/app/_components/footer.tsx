@@ -1,5 +1,4 @@
 import Container from "@/app/_components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
 import { FileUser, GraduationCap } from "lucide-react";
 import Link from "next/link";
 
