@@ -1,3 +1,200 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--theme-color-primary);
+  --color-primary-light: var(--theme-color-primary-light);
+  --color-primary-dark: var(--theme-color-primary-dark);
+  --color-secondary: var(--theme-color-secondary);
+  --color-secondary-light: var(--theme-color-secondary-light);
+  --color-secondary-dark: var(--theme-color-secondary-dark);
+  --color-accent: var(--theme-color-accent);
+  --color-neutral: var(--theme-color-neutral);
+  --color-neutral-light: var(--theme-color-neutral-light);
+  --color-neutral-dark: var(--theme-color-neutral-dark);
+  --color-success: var(--theme-color-success);
+  --color-warning: var(--theme-color-warning);
+  --color-error: var(--theme-color-error);
+  --color-info: var(--theme-color-info);
+  --color-surface: var(--theme-color-surface);
+  --color-text: var(--theme-color-text);
+  --color-text-muted: var(--theme-color-text-muted);
+  --shadow-color: var(--theme-shadow-color);
+  --radius-sm: var(--theme-radius-sm);
+  --radius-md: var(--theme-radius-md);
+  --radius-lg: var(--theme-radius-lg);
+}
+
+@layer base {
+  :root {
+    /* Ocean theme as default */
+    --theme-color-primary: #aab9ff;
+    --theme-color-primary-light: #c7d0ff;
+    --theme-color-primary-dark: #8295ff;
+    --theme-color-secondary: #6889ff;
+    --theme-color-secondary-light: #8ca5ff;
+    --theme-color-secondary-dark: #4a6df0;
+    --theme-color-accent: #ff9e64;
+    --theme-color-neutral: #f1f5f9;
+    --theme-color-neutral-light: #f8fafc;
+    --theme-color-neutral-dark: #e2e8f0;
+    --theme-color-success: #4ade80;
+    --theme-color-warning: #fbbf24;
+    --theme-color-error: #f87171;
+    --theme-color-info: #60a5fa;
+    --theme-color-surface: #ffffff;
+    --theme-color-text: #1e293b;
+    --theme-color-text-muted: #64748b;
+    --theme-shadow-color: rgba(170, 185, 255, 0.15);
+    --theme-radius-sm: 0.25rem;
+    --theme-radius-md: 0.5rem;
+    --theme-radius-lg: 0.75rem;
+  }
+
+  [data-theme='ocean'] {
+    --theme-color-primary: #aab9ff;
+    --theme-color-primary-light: #c7d0ff;
+    --theme-color-primary-dark: #8295ff;
+    --theme-color-secondary: #6889ff;
+    --theme-color-secondary-light: #8ca5ff;
+    --theme-color-secondary-dark: #4a6df0;
+    --theme-color-accent: #ff9e64;
+    --theme-color-neutral: #f1f5f9;
+    --theme-color-neutral-light: #f8fafc;
+    --theme-color-neutral-dark: #e2e8f0;
+    --theme-color-success: #4ade80;
+    --theme-color-warning: #fbbf24;
+    --theme-color-error: #f87171;
+    --theme-color-info: #60a5fa;
+    --theme-color-surface: #ffffff;
+    --theme-color-text: #1e293b;
+    --theme-color-text-muted: #64748b;
+    --theme-shadow-color: rgba(170, 185, 255, 0.15);
+    --theme-radius-sm: 0.25rem;
+    --theme-radius-md: 0.5rem;
+    --theme-radius-lg: 0.75rem;
+  }
+
+  [data-theme='candy'] {
+    --theme-color-primary: #f9a8d4;
+    --theme-color-primary-light: #fbcfe8;
+    --theme-color-primary-dark: #f472b6;
+    --theme-color-secondary: #c084fc;
+    --theme-color-secondary-light: #d8b4fe;
+    --theme-color-secondary-dark: #a855f7;
+    --theme-color-accent: #38bdf8;
+    --theme-color-neutral: #f5f3ff;
+    --theme-color-neutral-light: #faf5ff;
+    --theme-color-neutral-dark: #ede9fe;
+    --theme-color-success: #86efac;
+    --theme-color-warning: #fcd34d;
+    --theme-color-error: #fb7185;
+    --theme-color-info: #93c5fd;
+    --theme-color-surface: #ffffff;
+    --theme-color-text: #4c1d95;
+    --theme-color-text-muted: #7e22ce;
+    --theme-shadow-color: rgba(249, 168, 212, 0.15);
+    --theme-radius-sm: 0.5rem;
+    --theme-radius-md: 1rem;
+    --theme-radius-lg: 1.5rem;
+  }
+
+  [data-theme='forest'] {
+    --theme-color-primary: #4ade80;
+    --theme-color-primary-light: #86efac;
+    --theme-color-primary-dark: #22c55e;
+    --theme-color-secondary: #10b981;
+    --theme-color-secondary-light: #34d399;
+    --theme-color-secondary-dark: #059669;
+    --theme-color-accent: #fbbf24;
+    --theme-color-neutral: #ecfdf5;
+    --theme-color-neutral-light: #f0fdf4;
+    --theme-color-neutral-dark: #d1fae5;
+    --theme-color-success: #34d399;
+    --theme-color-warning: #f59e0b;
+    --theme-color-error: #ef4444;
+    --theme-color-info: #0ea5e9;
+    --theme-color-surface: #f8fafc;
+    --theme-color-text: #064e3b;
+    --theme-color-text-muted: #065f46;
+    --theme-shadow-color: rgba(74, 222, 128, 0.15);
+    --theme-radius-sm: 0.25rem;
+    --theme-radius-md: 0.375rem;
+    --theme-radius-lg: 0.5rem;
+  }
+
+  [data-theme='midnight'] {
+    --theme-color-primary: #8b5cf6;
+    --theme-color-primary-light: #a78bfa;
+    --theme-color-primary-dark: #7c3aed;
+    --theme-color-secondary: #6366f1;
+    --theme-color-secondary-light: #818cf8;
+    --theme-color-secondary-dark: #4f46e5;
+    --theme-color-accent: #f43f5e;
+    --theme-color-neutral: #1e1b4b;
+    --theme-color-neutral-light: #312e81;
+    --theme-color-neutral-dark: #0f172a;
+    --theme-color-success: #10b981;
+    --theme-color-warning: #f59e0b;
+    --theme-color-error: #ef4444;
+    --theme-color-info: #06b6d4;
+    --theme-color-surface: #0f172a;
+    --theme-color-text: #e0e7ff;
+    --theme-color-text-muted: #a5b4fc;
+    --theme-shadow-color: rgba(139, 92, 246, 0.25);
+    --theme-radius-sm: 0.25rem;
+    --theme-radius-md: 0.5rem;
+    --theme-radius-lg: 0.75rem;
+  }
+
+  [data-theme='sunset'] {
+    --theme-color-primary: #fb923c;
+    --theme-color-primary-light: #fdba74;
+    --theme-color-primary-dark: #f97316;
+    --theme-color-secondary: #f43f5e;
+    --theme-color-secondary-light: #fb7185;
+    --theme-color-secondary-dark: #e11d48;
+    --theme-color-accent: #3b82f6;
+    --theme-color-neutral: #fff7ed;
+    --theme-color-neutral-light: #ffedd5;
+    --theme-color-neutral-dark: #fed7aa;
+    --theme-color-success: #22c55e;
+    --theme-color-warning: #eab308;
+    --theme-color-error: #dc2626;
+    --theme-color-info: #0ea5e9;
+    --theme-color-surface: #ffffff;
+    --theme-color-text: #7c2d12;
+    --theme-color-text-muted: #9a3412;
+    --theme-shadow-color: rgba(251, 146, 60, 0.15);
+    --theme-radius-sm: 0.125rem;
+    --theme-radius-md: 0.25rem;
+    --theme-radius-lg: 0.375rem;
+  }
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-neutral);
+  border-radius: var(--radius-lg);
+}
+
+.alert-success {
+  background-color: var(--color-success);
+  color: var(--color-surface);
+}
+
+.alert-error {
+  background-color: var(--color-error);
+  color: var(--color-surface);
+}
