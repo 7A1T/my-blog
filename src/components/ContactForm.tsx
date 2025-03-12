@@ -1,4 +1,4 @@
-"use client"; // Necessary for Next.js 13+ app directory
+"use client";
 
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { Field, Input, Textarea, Button } from "@headlessui/react";
