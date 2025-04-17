@@ -1,0 +1,25 @@
+@layer base {
+  [data-theme="forest"] {
+    --theme-color-primary: #4ade80;
+    --theme-color-primary-light: #86efac;
+    --theme-color-primary-dark: #22c55e;
+    --theme-color-secondary: #10b981;
+    --theme-color-secondary-light: #34d399;
+    --theme-color-secondary-dark: #059669;
+    --theme-color-accent: #fbbf24;
+    --theme-color-neutral: #ecfdf5;
+    --theme-color-neutral-light: #f0fdf4;
+    --theme-color-neutral-dark: #d1fae5;
+    --theme-color-success: #34d399;
+    --theme-color-warning: #f59e0b;
+    --theme-color-error: #ef4444;
+    --theme-color-info: #0ea5e9;
+    --theme-color-surface: #f8fafc;
+    --theme-color-text: #064e3b;
+    --theme-color-text-muted: #065f46;
+    --theme-shadow-color: rgba(74, 222, 128, 0.15);
+    --theme-radius-sm: 0.25rem;
+    --theme-radius-md: 0.375rem;
+    --theme-radius-lg: 0.5rem;
+  }
+}

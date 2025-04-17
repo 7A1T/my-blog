@@ -1,0 +1,25 @@
+@layer base {
+  [data-theme="sunset"] {
+    --theme-color-primary: #fb923c;
+    --theme-color-primary-light: #fdba74;
+    --theme-color-primary-dark: #f97316;
+    --theme-color-secondary: #f43f5e;
+    --theme-color-secondary-light: #fb7185;
+    --theme-color-secondary-dark: #e11d48;
+    --theme-color-accent: #3b82f6;
+    --theme-color-neutral: #fff7ed;
+    --theme-color-neutral-light: #ffedd5;
+    --theme-color-neutral-dark: #fed7aa;
+    --theme-color-success: #22c55e;
+    --theme-color-warning: #eab308;
+    --theme-color-error: #dc2626;
+    --theme-color-info: #0ea5e9;
+    --theme-color-surface: #ffffff;
+    --theme-color-text: #7c2d12;
+    --theme-color-text-muted: #9a3412;
+    --theme-shadow-color: rgba(251, 146, 60, 0.15);
+    --theme-radius-sm: 0.125rem;
+    --theme-radius-md: 0.25rem;
+    --theme-radius-lg: 0.375rem;
+  }
+}

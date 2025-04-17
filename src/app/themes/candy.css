@@ -1,0 +1,25 @@
+@layer base {
+  [data-theme="candy"] {
+    --theme-color-primary: #f9a8d4;
+    --theme-color-primary-light: #fbcfe8;
+    --theme-color-primary-dark: #f472b6;
+    --theme-color-secondary: #c084fc;
+    --theme-color-secondary-light: #d8b4fe;
+    --theme-color-secondary-dark: #a855f7;
+    --theme-color-accent: #38bdf8;
+    --theme-color-neutral: #f5f3ff;
+    --theme-color-neutral-light: #faf5ff;
+    --theme-color-neutral-dark: #ede9fe;
+    --theme-color-success: #86efac;
+    --theme-color-warning: #fcd34d;
+    --theme-color-error: #fb7185;
+    --theme-color-info: #93c5fd;
+    --theme-color-surface: #ffffff;
+    --theme-color-text: #4c1d95;
+    --theme-color-text-muted: #7e22ce;
+    --theme-shadow-color: rgba(249, 168, 212, 0.15);
+    --theme-radius-sm: 0.5rem;
+    --theme-radius-md: 1rem;
+    --theme-radius-lg: 1.5rem;
+  }
+}

@@ -1,0 +1,25 @@
+@layer base {
+  [data-theme="midnight"] {
+    --theme-color-primary: #8b5cf6;
+    --theme-color-primary-light: #a78bfa;
+    --theme-color-primary-dark: #7c3aed;
+    --theme-color-secondary: #6366f1;
+    --theme-color-secondary-light: #818cf8;
+    --theme-color-secondary-dark: #4f46e5;
+    --theme-color-accent: #f43f5e;
+    --theme-color-neutral: #1e1b4b;
+    --theme-color-neutral-light: #312e81;
+    --theme-color-neutral-dark: #0f172a;
+    --theme-color-success: #10b981;
+    --theme-color-warning: #f59e0b;
+    --theme-color-error: #ef4444;
+    --theme-color-info: #06b6d4;
+    --theme-color-surface: #0f172a;
+    --theme-color-text: #e0e7ff;
+    --theme-color-text-muted: #a5b4fc;
+    --theme-shadow-color: rgba(139, 92, 246, 0.25);
+    --theme-radius-sm: 0.25rem;
+    --theme-radius-md: 0.5rem;
+    --theme-radius-lg: 0.75rem;
+  }
+}
