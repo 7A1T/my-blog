@@ -17,8 +17,12 @@
     100% { filter: hue-rotate(var(--hue)) saturate(var(--saturate)) sepia(var(--sepia)); }
   }
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
   
   --animate-hue: hue 20s linear infinite;
@@ -26,80 +30,76 @@
 }
 
 /* Component styles */
-
 .fake-shader {
-  --saturate: 6;
-  --sepia: 1;
+  --speed-factor: 5;
+  --saturate: 5;
+  --sepia: 0;
   --hue: 360deg;
-  @apply bg-cover overflow-hidden animate-hue;
-  background-image: var(--img-1);
+  @apply relative min-h-screen w-full overflow-hidden;
   
-  > * { z-index: 3; }
-  
-  &::after, &::before {
+  /* Container for the animated background */
+  &::before {
     content: '';
-    @apply absolute inset-[-100%] bg-cover pointer-events-none aspect-[1] animate-spin;
+    position: fixed;
+    width: 300vmax; /* Increase size to ensure coverage during rotation */
+    height: 300vmax;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    background-image: var(--img-1);
+    background-size: cover;
+    background-position: center;
+    animation: var(--animate-hue);
     z-index: 1;
   }
   
-  &::before {
-    mix-blend-mode: hard-light;
-    animation-duration: calc(1s * var(--speed-factor));
-    background-image: var(--img-2);
-  }
-  
+  /* Frosted glass overlay */
   &::after {
+    content: '';
+    @apply fixed inset-0;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.3);
     z-index: 2;
-    mix-blend-mode: lighten;
-    animation-direction: reverse;
-    animation-duration: calc(2.5s * var(--speed-factor));
-    background-image: var(--img-3);
   }
   
-  &.vivid {
-    --speed-factor: 2;
-    --saturate: 4;
-    --sepia: 0;
-    --hue: 360deg;
-    
-    &::before {
-      mix-blend-mode: luminosity;
-    }
-
-    &::after {
-      mix-blend-mode: color-dodge;
-      animation-direction: forwards;
-    }
+  /* Content container */
+  > * { 
+    position: relative;
+    z-index: 3; 
   }
   
-  &.metal {
-    --speed-factor: 7;
-    --saturate: 0;
-    --sepia: 0;
-    --hue: 0deg;
-    
-    &::before {
-      mix-blend-mode: luminosity;
-    }
+  .glass-container {
+    @apply backdrop-blur-md bg-white/30 rounded-lg;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 4;
+  }
 
-    &::after {
-      mix-blend-mode: color-dodge;
-      animation-direction: forwards;
+  @media (min-width: 768px) {
+    &::before {
+      animation: var(--animate-spin), var(--animate-hue);
+      animation-duration: calc(1s * var(--speed-factor)), 20s;
+      animation-timing-function: linear, linear;
+      animation-iteration-count: infinite, infinite;
+      background-image: var(--img-2);
     }
   }
-  
-  &.silk {
-    --speed-factor: 6;
-    --saturate: 10;
-    --sepia: 1;
-    --hue: 360deg;
-    
-    &::before {
-      mix-blend-mode: multiply;
-    }
 
-    &::after {
-      mix-blend-mode: hard-light;
+  /* Static mobile version */
+  @media (max-width: 767px) {
+    &::before {
+      width: 100vw;
+      height: 100vh;
+      animation: none;
+      background-blend-mode: overlay;
+      background-image: 
+        linear-gradient(
+          135deg,
+          var(--theme-color-primary) 0%,
+          var(--theme-color-secondary) 50%,
+          var(--theme-color-accent) 100%
+        );
     }
   }
 }
