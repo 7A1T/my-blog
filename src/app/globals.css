@@ -1,10 +1,5 @@
 @import "tailwindcss";
 @import "./themes/base.css";
-@import "./themes/ocean.css";
-@import "./themes/candy.css";
-@import "./themes/forest.css";
-@import "./themes/midnight.css";
-@import "./themes/sunset.css";
 
 @theme {
   --speed-factor: 40;
@@ -66,4 +61,51 @@
     @apply backdrop-blur-md bg-white/30 border border-white/20 shadow-md;
     z-index: -1;
   }
+
+
+@keyframes wave1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+@keyframes wave2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+@keyframes wave3 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@keyframes wave4 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+
+.animate-wave1 {
+  animation: wave1 6s ease-in-out infinite alternate;
+}
+.animate-wave2 {
+  animation: wave2 8s ease-in-out infinite alternate;
+}
+.animate-wave3 {
+  animation: wave3 10s ease-in-out infinite alternate;
+}
+.animate-wave4 {
+  animation: wave4 12s ease-in-out infinite alternate;
+}
+
+@keyframes ship-bob {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(2deg);
+  }
+}
+
+.animate-ship {
+  animation: ship-bob 4s ease-in-out infinite;
+}
 }

@@ -4,7 +4,8 @@ import LowPolyBackground from "@/components/LowPolyBackground";
 import Typewriter from "@/components/Typewriter";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import WavesSVG from "@/components/WavesSVG";
+import ShipOnWaves from "@/components/ShipOnWaves";
+
 // TODO: add theming to wave and background, take colours from selected theme
 // TODO theme selector
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
             </div>
             {/* separator (SVG) */}
             <div className="absolute bottom-[-2] left-0 w-full z-[-1]">
-              <WavesSVG />
+              <ShipOnWaves/>
             </div>
           </section>
         </div>

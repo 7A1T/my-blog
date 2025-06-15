@@ -1,0 +1,83 @@
+"use client";
+
+import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
+import { useRef, useState } from "react";
+
+export default function PirateShipOnWave() {
+  const pathRef = useRef<SVGPathElement | null>(null);
+  const [point, setPoint] = useState({ x: 0, y: 0 });
+  const progress = useMotionValue(0);
+  const directionRef = useRef(1);
+
+  useAnimationFrame((t) => {
+    const speed = 0.0005;
+    let current = progress.get() + speed * directionRef.current;
+
+    if (current > 0.5) {
+      current = 0;
+    }
+
+    progress.set(current);
+
+    if (pathRef.current) {
+      const length = pathRef.current.getTotalLength();
+      const pointAtLength = pathRef.current.getPointAtLength(current * length);
+      const bobbing = Math.sin(t / 300);
+      setPoint({ x: pointAtLength.x, y: pointAtLength.y + bobbing });
+    }
+  });
+
+  return (
+    <div className="relative w-full h-auto">
+      <motion.svg
+        viewBox="0 0 960 540"
+        className="w-full h-auto"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Rendered animated waves */}
+        <g className="animate-wave1">
+          <path
+            d="M0 457L17.8 454.3C35.7 451.7 71.3 446.3 106.8 444.2C142.3 442 177.7 443 213.2 437.5C248.7 432 284.3 420 320 421.3C355.7 422.7 391.3 437.3 426.8 444.5C462.3 451.7 497.7 451.3 533.2 451.5C568.7 451.7 604.3 452.3 640 449C675.7 445.7 711.3 438.3 746.8 439.2C782.3 440 817.7 449 853.2 453.2C888.7 457.3 924.3 456.7 942.2 456.3L960 456L960 541L0 541Z"
+            className="fill-[var(--theme-color-primary)]"
+          />
+        </g>
+        <g className="">
+          <path
+            ref={pathRef}
+            d="M0 435L17.8 436.5C35.7 438 71.3 441 106.8 441.5C142.3 442 177.7 440 213.2 446.2C248.7 452.3 284.3 466.7 320 472.8C355.7 479 391.3 477 426.8 473.5C462.3 470 497.7 465 533.2 462.7C568.7 460.3 604.3 460.7 640 460.5C675.7 460.3 711.3 459.7 746.8 457.2C782.3 454.7 817.7 450.3 853.2 452.3C888.7 454.3 924.3 462.7 942.2 466.8L960 471L960 541L0 541Z"
+            className="fill-[var(--theme-color-secondary)]"
+          />
+        </g>
+        <g className="animate-wave3">
+          <path
+            d="M0 493L17.8 489.5C35.7 486 71.3 479 106.8 477C142.3 475 177.7 478 213.2 482.3C248.7 486.7 284.3 492.3 320 495.5C355.7 498.7 391.3 499.3 426.8 498C462.3 496.7 497.7 493.3 533.2 493C568.7 492.7 604.3 495.3 640 492.8C675.7 490.3 711.3 482.7 746.8 477.3C782.3 472 817.7 469 853.2 469C888.7 469 924.3 472 942.2 473.5L960 475L960 541L0 541Z"
+            className="fill-[var(--theme-color-primary)]"
+          />
+        </g>
+        <g className="animate-wave4">
+          <path
+            d="M0 508L17.8 507.8C35.7 507.7 71.3 507.3 106.8 509.7C142.3 512 177.7 517 213.2 517C248.7 517 284.3 512 320 508.8C355.7 505.7 391.3 504.3 426.8 502.7C462.3 501 497.7 499 533.2 497.8C568.7 496.7 604.3 496.3 640 497.8C675.7 499.3 711.3 502.7 746.8 503.5C782.3 504.3 817.7 502.7 853.2 504C888.7 505.3 924.3 509.7 942.2 511.8L960 514L960 541L0 541Z"
+            className="fill-[var(--theme-color-secondary)]"
+          />
+        </g>
+
+        {/* Pirate Ship */}
+        <motion.g
+          style={{
+            translateX: point.x,
+            translateY: point.y - 22,
+          }}
+        >
+          <path
+            d="M7.23 18.66h1.91M11.05 18.66h1.9M14.86 18.66h1.91M17.73 13.89l-1 .95H8.18l-.95-.95H1.5v4.77a3.82 3.82 0 0 1 3.82 3.82h8.59a8.6 8.6 0 0 0 8.59-8.59zM12 .52v14.32M12 1.48a7.64 7.64 0 0 1 7.64 7.63v1L12 12ZM12 5.29H7.23l.95-1.9-.95-1.91H12z"
+            fill="black"
+            stroke="black"
+            strokeWidth="0.5"
+          />
+        </motion.g>
+      </motion.svg>
+    </div>
+  );
+}
+
