@@ -58,9 +58,8 @@ export default function Home() {
       <section className="bg-white py-20 px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Projects</h2>
-          {/* Your project content here */}
           <p className="text-gray-700">
-            Here’s where you can showcase your best work...
+            project goes here with images, sample code etc.
           </p>
         </div>
       </section>
