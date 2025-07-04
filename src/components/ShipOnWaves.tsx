@@ -14,7 +14,7 @@ export default function PirateShipOnWave() {
     let current = progress.get() + speed * directionRef.current;
 
     if (current > 0.5) {
-      current = 0;
+      current = 1;
     }
 
     progress.set(current);
@@ -80,4 +80,3 @@ export default function PirateShipOnWave() {
     </div>
   );
 }
-

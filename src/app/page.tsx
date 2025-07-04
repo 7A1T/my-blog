@@ -5,13 +5,14 @@ import Typewriter from "@/components/Typewriter";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ShipOnWaves from "@/components/ShipOnWaves";
+import ProjectCard from "@/components/ProjectCard";
 
 // TODO: add theming to wave and background, take colours from selected theme
 // TODO theme selector
 export default function Home() {
   return (
     <div>
-      <div className="fake-shader h-screen">
+      <div className="h-screen">
         <LowPolyBackground />
         {/* Navigation Bar */}
         <div className="glass-container h-full">
@@ -48,19 +49,23 @@ export default function Home() {
             </div>
             {/* separator (SVG) */}
             <div className="absolute bottom-[-2] left-0 w-full z-[-1]">
-              <ShipOnWaves/>
+              <ShipOnWaves />
             </div>
           </section>
         </div>
       </div>
 
       {/* Projects Section */}
-      <section className="bg-white py-20 px-8">
+      <section id="projects-section" className="bg-white py-20 px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Projects</h2>
-          <p className="text-gray-700">
-            project goes here with images, sample code etc.
-          </p>
+          <ProjectCard
+            title="Password Manager"
+            description="A basic password manager to practice data security using minimal external libraries."
+            completionPercentage={5}
+            screenshots={[""]}
+            githubUrl="https://github.com/7A1T/password-manager"
+          />
         </div>
       </section>
     </div>
